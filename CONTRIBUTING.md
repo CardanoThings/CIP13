@@ -2,6 +2,13 @@
 
 Thanks for helping improve the CIP-13 / `web+cardano` docs site.
 
+## Branch model
+
+- **`development`** — default branch for day-to-day work and contributor PRs
+- **`main`** — production; merges here deploy to GitHub Pages
+
+Open pull requests against **`development`**. Maintainers ship to production with a PR from `development` → `main`.
+
 ## Prerequisites
 
 - Node.js 22+
@@ -58,8 +65,8 @@ In the PR, include enough for maintainers to review the claim: release notes, do
 
 Use the **Wallet support** pull request template:
 
-1. Open a PR against `main`
-2. In the GitHub compare UI, choose the **Wallet support** template (or use [this link](https://github.com/CardanoThings/CIP13/compare/main...main?quick_pull=1&template=wallet-support.md) after pushing your branch)
+1. Open a PR against **`development`**
+2. In the GitHub compare UI, choose the **Wallet support** template (or use [this link](https://github.com/CardanoThings/CIP13/compare/development...development?quick_pull=1&template=wallet-support.md) after pushing your branch)
 
 ### Maintainers
 

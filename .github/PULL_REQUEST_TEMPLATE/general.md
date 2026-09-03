@@ -1,3 +1,5 @@
+<!-- Base this PR on the `development` branch (not `main`). Production ships via development → main. -->
+
 ## Summary
 
 <!-- What does this PR change and why? -->

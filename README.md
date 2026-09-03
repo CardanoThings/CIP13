@@ -6,6 +6,8 @@ SvelteKit static site documenting CIP-13 / `web+cardano` links.
 
 **Contributing:** see [CONTRIBUTING.md](CONTRIBUTING.md). Wallet teams can self-report CIP compliance by updating [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json) and opening a PR with the [Wallet support](.github/PULL_REQUEST_TEMPLATE/wallet-support.md) template.
 
+Day-to-day work and contributor PRs target the **`development`** branch. Production deploys only from **`main`**.
+
 ## Developing
 
 ```sh
@@ -24,7 +26,7 @@ Output is written to `build/`.
 
 ## Deploy (GitHub Pages)
 
-The site is deployed automatically to GitHub Pages on pushes to `main` (see `.github/workflows/deploy.yml`).
+The site is deployed automatically to GitHub Pages on pushes to `main` (see `.github/workflows/deploy.yml`). Merge `development` → `main` when you want to ship.
 
 **Custom domain:** `cip13.cardanothings.io`
 
