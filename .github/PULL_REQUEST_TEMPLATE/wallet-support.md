@@ -1,3 +1,5 @@
+<!-- Base this PR on the `development` branch (not `main`). -->
+
 ## Wallet support update
 
 - Wallet name:

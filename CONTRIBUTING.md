@@ -2,6 +2,13 @@
 
 Thanks for helping improve the CIP-13 / `web+cardano` docs site.
 
+## Branch model
+
+- **`development`** — default branch for day-to-day work and contributor PRs
+- **`main`** — production; merges here deploy to GitHub Pages
+
+Open pull requests against **`development`**. Maintainers ship to production with a PR from `development` → `main`.
+
 ## Prerequisites
 
 - Node.js 22+
@@ -58,12 +65,30 @@ In the PR, include enough for maintainers to review the claim: release notes, do
 
 Use the **Wallet support** pull request template:
 
-1. Open a PR against `main`
-2. In the GitHub compare UI, choose the **Wallet support** template (or use [this link](https://github.com/CardanoThings/CIP13/compare/main...main?quick_pull=1&template=wallet-support.md) after pushing your branch)
+1. Open a PR against **`development`**
+2. In the GitHub compare UI, choose the **Wallet support** template (or use [this link](https://github.com/CardanoThings/CIP13/compare/development...development?quick_pull=1&template=wallet-support.md) after pushing your branch)
 
 ### Maintainers
 
 When merging wallet-support changes, bump the hardcoded **Last updated** date in [`src/lib/components/SupportTable.svelte`](src/lib/components/SupportTable.svelte).
+
+### Maintainers: branch protection (one-time GitHub setup)
+
+If these are not already configured on [CardanoThings/CIP13](https://github.com/CardanoThings/CIP13):
+
+1. **Settings → General → Default branch** → set to `development`
+2. **Settings → Branches → Add branch protection rule** for `main`:
+   - Require a pull request before merging
+   - Require at least **1** approving review
+   - Do not allow force pushes
+   - Do not allow deletions
+3. **Add rule** for `development`:
+   - Require a pull request before merging
+   - Approving reviews optional (0 required)
+   - Do not allow force pushes
+   - Do not allow deletions
+
+Production deploys only when `development` is merged into `main`.
 
 ## Code style
 
