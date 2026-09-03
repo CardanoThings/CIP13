@@ -2,6 +2,10 @@
 
 SvelteKit static site documenting CIP-13 / `web+cardano` links.
 
+**License:** [Apache-2.0](LICENSE)
+
+**Contributing:** see [CONTRIBUTING.md](CONTRIBUTING.md). Wallet teams can self-report CIP compliance by updating [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json) and opening a PR with the [Wallet support](.github/PULL_REQUEST_TEMPLATE/wallet-support.md) template.
+
 ## Developing
 
 ```sh
