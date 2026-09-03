@@ -23,6 +23,7 @@ Before opening a PR that changes site code, run:
 
 ```sh
 pnpm run lint
+pnpm run check
 ```
 
 ## Ways to contribute
@@ -92,4 +93,4 @@ Production deploys only when `development` is merged into `main`.
 
 ## Code style
 
-Formatting and linting are enforced with Prettier and ESLint (`pnpm run lint` / `pnpm run format`). Match existing patterns in the repo.
+Formatting, linting, and `svelte-check` are enforced in CI (`pnpm run lint` / `pnpm run check` / `pnpm run format`). Match existing patterns in the repo.
