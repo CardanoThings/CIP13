@@ -1,0 +1,66 @@
+{
+	"columns": [
+		"default (CIP-13)",
+		"//stake (CIP-13)",
+		"//claim (CIP-99)",
+		"//drep (CIP-162)",
+		"//browse (CIP-158)"
+	],
+	"rows": [
+		{
+			"wallet": "Yoroi",
+			"link": "https://yoroi-wallet.com/",
+			"values": {
+				"default (CIP-13)": "supported",
+				"//stake (CIP-13)": "none",
+				"//claim (CIP-99)": "untested",
+				"//drep (CIP-162)": "none",
+				"//browse (CIP-158)": "none"
+			}
+		},
+		{
+			"wallet": "Eternl",
+			"link": "https://eternl.io/",
+			"values": {
+				"default (CIP-13)": "partial",
+				"//stake (CIP-13)": "supported",
+				"//claim (CIP-99)": "untested",
+				"//drep (CIP-162)": "none",
+				"//browse (CIP-158)": "none"
+			}
+		},
+		{
+			"wallet": "Vespr",
+			"link": "https://vespr.xyz/",
+			"values": {
+				"default (CIP-13)": "supported",
+				"//stake (CIP-13)": "supported",
+				"//claim (CIP-99)": "untested",
+				"//drep (CIP-162)": "none",
+				"//browse (CIP-158)": "supported"
+			}
+		},
+		{
+			"wallet": "Begin",
+			"link": "https://begin.is/",
+			"values": {
+				"default (CIP-13)": "supported",
+				"//stake (CIP-13)": "none",
+				"//claim (CIP-99)": "untested",
+				"//drep (CIP-162)": "none",
+				"//browse (CIP-158)": "supported"
+			}
+		},
+		{
+			"wallet": "Lace",
+			"link": "https://lace.io/",
+			"values": {
+				"default (CIP-13)": "untested",
+				"//stake (CIP-13)": "untested",
+				"//claim (CIP-99)": "untested",
+				"//drep (CIP-162)": "untested",
+				"//browse (CIP-158)": "untested"
+			}
+		}
+	]
+}

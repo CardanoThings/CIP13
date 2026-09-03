@@ -1,0 +1,106 @@
+{
+	"/pay": {
+		"title": "Requesting Payments with no friction at all",
+		"description": "Create a pre-filled ADA transaction with a single link. This will be able to support other assets and metadata in the future, go check it out!",
+		"cips": [13, 157],
+		"status": "live",
+		"intro": "This is the OG CIP-13 standard for creating simple ADA transactions using the `//web+cardano` URI scheme without a dedicated authority. One link, recipient address and optional ADA amount. Click/scan the link, the wallet app opens with the prefilled data, sign & submit and you are done. Easy.\n\n**Note:** CIP-157 will introduce a more advanced payment link standard under the `//pay` authority and add support for multiple assets and optional metadata in transactions.",
+		"linkBuildExplanation": "Classic **CIP-13** payment URIs use the **`web+cardano:`** scheme followed immediately by a **Bech32 payment address** (no `//` authority segment). Optionally append **`?amount=`** with a decimal ADA amount.\n\nGeneral shape: `web+cardano:<address>[?amount=<ada>]`.",
+		"exampleLink": "web+cardano:addr1q8xy5cfmccecvvr2z7ns7mzld8qkq73lgwnq7vy3my0s5rl77gw49j7k5advzrqtuxc7pa7jww5q7ns42sayyt8msylsx4k2qx?amount=1.25",
+		"walletSupportColumns": ["CIP-13"],
+		"supportingDocs": [
+			{
+				"label": "CIP-13",
+				"href": "https://cips.cardano.org/cip/CIP-13"
+			},
+			{
+				"label": "CIP-157 Draft",
+				"href": "https://github.com/Crypto2099/CIPs/tree/cardano-uris-enhanced-payment/CIP-XXXX"
+			},
+			{
+				"label": "CIP-157 Discussion",
+				"href": "https://github.com/cardano-foundation/CIPs/pull/843"
+			}
+		]
+	},
+	"/stake": {
+		"title": "Two-Click Stake Pool Delegation with CIP-13",
+		"description": "Delegate to a pool with a single link or QR-Code. Gaining delegation for your pool on social media or events has never been easier.",
+		"cips": [13],
+		"status": "live",
+		"intro": "Stake links use the `//stake` authority to open a wallet with delegation targets pre-selected (one pool or a portfolio). Share portable delegation QR codes while wallets validate the URI and require user confirmation.",
+		"linkBuildExplanation": "Stake delegation links use the **`web+cardano://stake`** authority. Wallets expect the pool target in the query string—e.g. a **ticker** like `?WEED`",
+		"exampleLink": "web+cardano://stake?WEED",
+		"walletSupportColumns": ["CIP-13"],
+		"supportingDocs": [
+			{
+				"label": "CIP-13 on cips.cardano.org",
+				"href": "https://cips.cardano.org/cip/CIP-13"
+			}
+		]
+	},
+	"/drep": {
+		"title": "Delegating to DReps in less than a minute with CIP-162",
+		"description": "Promote yourself as a DRep with a single link or QR-Code. Share this on Cardano events or your website and let people immediately engage with decentralized governance.",
+		"cips": [162],
+		"status": "Proposed",
+		"intro": "As one of the newer CIP-13 enhancements (and not widely supported by wallets just yet), **CIP-162** introduced a new `//drep` authority so mobile wallets can open a pre-filled DRep delegation transaction from links and QR codes—using a CIP-129 DRep Id or the always_abstain / always_no_confidence - all thats left for the user is to sign and submit the transaction.\n\nDRep delegation has never been easier, especially at real life events: Just share a QR-Code with a web+cardano link and let the wallet do the rest.",
+		"linkBuildExplanation": "**CIP-162** DRep links use **`web+cardano://drep/`** plus a **CIP-129 DRep ID** or  **`always_abstain`** / **`always_no_confidence`**.\n\n",
+		"exampleLink": "web+cardano://drep/always_abstain",
+		"walletSupportColumns": ["CIP-162"],
+		"supportingDocs": [
+			{
+				"label": "CIP-162 draft PR (#1069)",
+				"href": "https://github.com/cardano-foundation/CIPs/pull/1069"
+			}
+		]
+	},
+	"/claim": {
+		"title": "Paperless onboarding airdrops with CIP-99",
+		"description": "Claim tokens or assets with a single link or QR-Code. Ideal for IRL events or onboarding users without paper wallets. One, two, sign and submit, welcome to Cardano!",
+		"cips": [99],
+		"status": "Live",
+		"intro": "**CIP-99** standardizes a QR/click-friendly claim flow for onboarding users (especially at IRL events) without “paper wallets”. It defines a new `//claim` authority with a versioned path: `/v1` and required query params: `faucet_url` and `code`. Wallets decode the URI and POST the user address + params to the faucet server, with clear status handling for success or errors.\n\nOf cause this isn't limited to onboarding new users, you can use it for any kind of claim flow you want to simplify. As this is dependend on a faucet server doing the actual work, you can even restrict your airdrops to a whitelist or other mandatory requirements.",
+		"linkBuildExplanation": "**CIP-99** claim URIs use **`web+cardano://claim/v1`** and **required** query parameters:\n\n- **`faucet_url`** — HTTPS faucet endpoint (**URL-encoded**)\n- **`code`** — claim / event code\n\nWallets decode the link and call the faucet with the user’s address and these fields.",
+		"exampleLink": "web+cardano://claim/v1?faucet_url=https%3A%2F%2Fclaim.example.org%2Fevent2026&code=CONSENSUS2026",
+		"walletSupportColumns": ["CIP-99"],
+		"supportingDocs": [
+			{
+				"label": "CIP-99 on cips.cardano.org",
+				"href": "https://cips.cardano.org/cip/CIP-0099"
+			},
+			{
+				"label": "CIP-99 Demo",
+				"href": "https://beta.onbd.io/"
+			},
+			{
+				"label": "Onboarding with CIP-99 Airdrops by onboard.ninja",
+				"href": "https://onboard.ninja/"
+			}
+		]
+	},
+	"/browse": {
+		"title": "Open Cardano DApps where they belong",
+		"description": "Launch Cardano dApps directly in the in-app browser of a mobile wallet. No more copy & pasting URLs, way less friction, more engagement.",
+		"cips": [158],
+		"status": "live",
+		"intro": "The fairly new **CIP-158** standard introduces the `//browse` authority to open a wallet and immediately route its embedded browser to a specific dApp URL. As mobile browser have no access to wallets directly, this is a great way to enable wallet functionality on mobile devices, reduce friction for the user and increase engagement.",
+		"linkBuildExplanation": "**CIP-158** browse links use **`web+cardano://browse/v1`** and pass the dApp location in the **`uri`** query parameter. The value must be a **URL-encoded** `https://…` URL (your example dApp page).\n\nShape: `web+cardano://browse/v1?uri=<encoded-https-url>`.",
+		"exampleLink": "web+cardano://browse/v1?uri=https%3A%2F%2Fminswap.org%2Fmarket%3Fcrypto%3Dtoken",
+		"walletSupportColumns": ["CIP-158"],
+		"supportingDocs": [
+			{
+				"label": "CIP-158 on cips.cardano.org",
+				"href": "https://cips.cardano.org/cip/CIP-0158"
+			},
+			{
+				"label": "CIP-158 discussion",
+				"href": "https://github.com/cardano-foundation/CIPs/pull/1058"
+			},
+			{
+				"label": "Minimal CIP-158 Banner Demo",
+				"href": "https://cip13.cardanothings.io/cip158-demo/"
+			}
+		]
+	}
+}
