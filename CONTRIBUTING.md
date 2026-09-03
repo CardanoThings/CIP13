@@ -72,6 +72,24 @@ Use the **Wallet support** pull request template:
 
 When merging wallet-support changes, bump the hardcoded **Last updated** date in [`src/lib/components/SupportTable.svelte`](src/lib/components/SupportTable.svelte).
 
+### Maintainers: branch protection (one-time GitHub setup)
+
+If these are not already configured on [CardanoThings/CIP13](https://github.com/CardanoThings/CIP13):
+
+1. **Settings → General → Default branch** → set to `development`
+2. **Settings → Branches → Add branch protection rule** for `main`:
+   - Require a pull request before merging
+   - Require at least **1** approving review
+   - Do not allow force pushes
+   - Do not allow deletions
+3. **Add rule** for `development`:
+   - Require a pull request before merging
+   - Approving reviews optional (0 required)
+   - Do not allow force pushes
+   - Do not allow deletions
+
+Production deploys only when `development` is merged into `main`.
+
 ## Code style
 
 Formatting and linting are enforced with Prettier and ESLint (`pnpm run lint` / `pnpm run format`). Match existing patterns in the repo.
