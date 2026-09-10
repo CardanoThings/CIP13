@@ -1,5 +1,6 @@
-<script lang="ts">
-	let { children } = $props<{ children: any }>();
+<script>
+	/** @type {{ children: import('svelte').Snippet }} */
+	let { children } = $props();
 </script>
 
 <section class="p-4">
