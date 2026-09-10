@@ -11,13 +11,13 @@
 - [ ] New wallet row
 - [ ] Update existing row
 
-| Link type | Status (`supported` / `partial` / `untested` / `none`) | Notes |
-| --- | --- | --- |
-| default (CIP-13) | | |
-| //stake (CIP-13) | | |
-| //claim (CIP-99) | | |
-| //drep (CIP-162) | | |
-| //browse (CIP-158) | | |
+| Link type          | Status (`supported` / `partial` / `untested` / `none`) | Notes |
+| ------------------ | ------------------------------------------------------ | ----- |
+| default (CIP-13)   |                                                        |       |
+| //stake (CIP-13)   |                                                        |       |
+| //claim (CIP-99)   |                                                        |       |
+| //drep (CIP-162)   |                                                        |       |
+| //browse (CIP-158) |                                                        |       |
 
 ## Evidence
 

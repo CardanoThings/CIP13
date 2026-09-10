@@ -80,11 +80,7 @@
 <div
 	class="fixed bottom-0 bg-white right-4 border-4 border-white p-1 h-22 w-20 z-10 shadow-[-8px_-8px_0_0_#000]"
 >
-	<button
-		class=" bg-white inline-block"
-		onclick={openDrawer}
-		bind:this={toggleButtonEl}
-	>
+	<button class=" bg-white inline-block" onclick={openDrawer} bind:this={toggleButtonEl}>
 		<Menu class="text-black w-16 h-16" />
 	</button>
 </div>

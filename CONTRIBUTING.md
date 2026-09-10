@@ -51,12 +51,12 @@ Do **not** invent new column names. If a new CIP / link type should appear in th
 
 ### Allowed status values
 
-| Status | Meaning |
-| --- | --- |
-| `supported` | Works for this link type |
-| `partial` | Works with known limitations (describe them in the PR) |
-| `untested` | Claimed or unknown; not verified yet |
-| `none` | Not implemented |
+| Status      | Meaning                                                |
+| ----------- | ------------------------------------------------------ |
+| `supported` | Works for this link type                               |
+| `partial`   | Works with known limitations (describe them in the PR) |
+| `untested`  | Claimed or unknown; not verified yet                   |
+| `none`      | Not implemented                                        |
 
 ### Evidence
 
