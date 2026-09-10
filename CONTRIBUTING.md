@@ -71,7 +71,7 @@ Use the **Wallet support** pull request template:
 
 ### Maintainers
 
-When merging wallet-support changes, bump the hardcoded **Last updated** date in [`src/lib/components/SupportTable.svelte`](src/lib/components/SupportTable.svelte).
+When merging wallet-support changes, bump the top-level **`lastUpdated`** field (ISO `YYYY-MM-DD`) in [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json). The table footer renders that field, so the date lives in the same file — and the same diff — as the data it describes.
 
 ### Maintainers: branch protection (one-time GitHub setup)
 

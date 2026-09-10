@@ -25,7 +25,8 @@
 
 ## Checklist
 
-- [ ] Edited only `src/lib/data/wallet-support.json` (unless updating Last updated)
+- [ ] Edited only `src/lib/data/wallet-support.json`
+- [ ] Bumped `lastUpdated` in that file to today's date (`YYYY-MM-DD`)
 - [ ] Every column has a status
 - [ ] Statuses use only allowed values
 - [ ] I represent this wallet or have permission to report on its behalf
