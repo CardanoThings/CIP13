@@ -1,5 +1,6 @@
 <script>
 	import { Asterisk, Check, CircleQuestionMark, Minus } from 'lucide-svelte';
+	import walletSupport from '$lib/data/wallet-support.json';
 
 	const {
 		title = 'Wallet',
@@ -11,7 +12,10 @@
 			'//drep (CIP-162)',
 			'//browse (CIP-158)'
 		],
-		rows = []
+		rows = [],
+		// Sourced from the data file itself, so bumping the date is part of the same
+		// diff as the data change rather than an edit to a separate component.
+		lastUpdated = walletSupport.lastUpdated
 	} = $props();
 
 	const icons = {
@@ -66,14 +70,17 @@
 	</tbody>
 
 	<tfoot>
-		<tr>
-			<td
-				colspan={columns.length + 1}
-				class="py-1 pl-3 relative bg-white border-white border-4 text-black text-[0.65rem]"
-			>
-				<strong class="font-medium">Last updated:</strong> 2026-05-18
-			</td>
-		</tr>
+		{#if lastUpdated}
+			<tr>
+				<td
+					colspan={columns.length + 1}
+					class="py-1 pl-3 relative bg-white border-white border-4 text-black text-[0.65rem]"
+				>
+					<strong class="font-medium">Last updated:</strong>
+					{lastUpdated}
+				</td>
+			</tr>
+		{/if}
 		<tr>
 			<td colspan={columns.length + 1} class="pt-3 pl-0 relative -left-1.5">
 				<ul class="flex flex-col items-start text-[0.65rem] text-white/25">

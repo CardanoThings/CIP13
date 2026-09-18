@@ -15,6 +15,10 @@
 	<ContentTitle title={data.title} authority="" cips={data.cips} status={data.status} />
 	<ContentIntro intro={data.intro} />
 	<HowTo uri={data.exampleLink} linkBuildExplanation={data.linkBuildExplanation} />
-	<WalletSupportBadges title="Wallet Support" columns={data.walletSupportColumns} authority={data.authority} />
+	<WalletSupportBadges
+		title="Wallet Support"
+		columns={data.walletSupportColumns}
+		authority={data.authority}
+	/>
 	<SupportingDocs docs={data.supportingDocs} />
 </ContentPageShell>

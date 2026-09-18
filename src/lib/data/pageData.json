@@ -96,10 +96,6 @@
 			{
 				"label": "CIP-158 discussion",
 				"href": "https://github.com/cardano-foundation/CIPs/pull/1058"
-			},
-			{
-				"label": "Minimal CIP-158 Banner Demo",
-				"href": "https://cip13.cardanothings.io/cip158-demo/"
 			}
 		]
 	}
