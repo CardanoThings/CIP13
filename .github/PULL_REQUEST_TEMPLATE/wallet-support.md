@@ -3,6 +3,7 @@
 ## Wallet support update
 
 - Wallet name:
+- Platform (`mobile` / `extension` / `desktop`):
 - Website / docs:
 - Contact (optional):
 

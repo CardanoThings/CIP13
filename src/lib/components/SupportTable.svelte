@@ -1,6 +1,7 @@
 <script>
 	import { Asterisk, Check, CircleQuestionMark, Minus } from 'lucide-svelte';
 	import walletSupport from '$lib/data/wallet-support.json';
+	import { PLATFORM_LABELS, rowKey } from '$lib/walletPlatform.js';
 
 	const {
 		title = 'Wallet',
@@ -51,10 +52,12 @@
 		</tr>
 	</thead>
 	<tbody class="text-white border-4 border-white">
-		{#each rows as row (row.wallet)}
+		{#each rows as row (rowKey(row))}
 			<tr class="bg-black/50">
 				<td class="walletCell border-t border-white px-3 py-3 text-base align-middle"
-					>{row.wallet}</td
+					>{row.wallet}{#if PLATFORM_LABELS[row.platform]}
+						<span class="block text-[0.65rem] text-white/60">{PLATFORM_LABELS[row.platform]}</span
+						>{/if}</td
 				>
 				{#each columns as col (col)}
 					{@const statusKey = row.values?.[col] ?? 'none'}

@@ -44,6 +44,7 @@ Wallet teams can update the public support matrix by editing **only** [`src/lib/
 2. Either add a new object under `rows`, or update an existing wallet’s `values`.
 3. Each row needs:
    - `wallet` — display name
+   - `platform` — `mobile`, `extension` or `desktop`. A wallet that behaves differently per platform gets one row per platform, since link handling is separate code on each
    - `link` — wallet website or docs URL
    - `values` — a status for **every** entry in the top-level `columns` array
 
