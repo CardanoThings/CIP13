@@ -1,0 +1,31 @@
+name: Spec or content correction
+description: The site describes a CIP, a link format or a wallet incorrectly.
+title: '[Correction] '
+labels: ['documentation']
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      placeholder: e.g. /pay
+    validations:
+      required: true
+  - type: textarea
+    id: site
+    attributes:
+      label: What the site says
+    validations:
+      required: true
+  - type: textarea
+    id: spec
+    attributes:
+      label: What the spec says
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Link to the relevant CIP section
+      placeholder: https://cips.cardano.org/cip/CIP-...
+    validations:
+      required: true
