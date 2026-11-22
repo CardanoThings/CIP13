@@ -1,5 +1,5 @@
 {
-	"lastUpdated": "2026-09-03",
+	"lastUpdated": "2026-11-21",
 	"columns": [
 		"default (CIP-13)",
 		"//stake (CIP-13)",
@@ -10,6 +10,7 @@
 	"rows": [
 		{
 			"wallet": "Yoroi",
+			"platform": "mobile",
 			"link": "https://yoroi-wallet.com/",
 			"values": {
 				"default (CIP-13)": "supported",
@@ -21,6 +22,7 @@
 		},
 		{
 			"wallet": "Eternl",
+			"platform": "mobile",
 			"link": "https://eternl.io/",
 			"values": {
 				"default (CIP-13)": "partial",
@@ -32,6 +34,7 @@
 		},
 		{
 			"wallet": "Vespr",
+			"platform": "mobile",
 			"link": "https://vespr.xyz/",
 			"values": {
 				"default (CIP-13)": "supported",
@@ -43,6 +46,7 @@
 		},
 		{
 			"wallet": "Begin",
+			"platform": "mobile",
 			"link": "https://begin.is/",
 			"values": {
 				"default (CIP-13)": "supported",
@@ -54,6 +58,7 @@
 		},
 		{
 			"wallet": "Lace",
+			"platform": "mobile",
 			"link": "https://lace.io/",
 			"values": {
 				"default (CIP-13)": "untested",
@@ -61,6 +66,18 @@
 				"//claim (CIP-99)": "untested",
 				"//drep (CIP-162)": "untested",
 				"//browse (CIP-158)": "untested"
+			}
+		},
+		{
+			"wallet": "Daedalus",
+			"platform": "desktop",
+			"link": "https://daedaluswallet.io/",
+			"values": {
+				"default (CIP-13)": "none",
+				"//stake (CIP-13)": "none",
+				"//claim (CIP-99)": "none",
+				"//drep (CIP-162)": "none",
+				"//browse (CIP-158)": "none"
 			}
 		}
 	]

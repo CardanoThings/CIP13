@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import walletSupport from '$lib/data/wallet-support.json';
+	import { PLATFORM_LABELS, rowKey } from '$lib/walletPlatform.js';
 
 	/**
 	 * pageData uses short tags like `["CIP-13"]`; wallet-support.json uses full column headers.
@@ -54,11 +55,11 @@
 			Full matrix on the <a class="home-link" href={resolve('/#wallet-support')}>homepage</a>.
 		</p>
 		<ul class="badges" role="list">
-			{#each relevantRows as row (row.wallet)}
+			{#each relevantRows as row (rowKey(row))}
 				<li>
 					<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -- external wallet URL -->
 					<a class="badge" href={row.link} target="_blank" rel="noopener noreferrer">
-						{row.wallet}
+						{row.wallet}{#if PLATFORM_LABELS[row.platform]}{` (${PLATFORM_LABELS[row.platform]})`}{/if}
 					</a>
 				</li>
 			{/each}
