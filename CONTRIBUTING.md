@@ -38,6 +38,8 @@ Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Wallet teams can update the public support matrix by editing **only** [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json) and opening a pull request with the **Wallet support** template.
 
+If you'd rather not edit JSON, file the [**Report or update wallet support**](https://github.com/CardanoThings/CIP13/issues/new?template=wallet-support.yml) issue form instead, and a maintainer will turn it into the data change.
+
 ### What to edit
 
 1. Fork the repo and create a branch.

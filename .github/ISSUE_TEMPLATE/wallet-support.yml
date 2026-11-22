@@ -1,0 +1,98 @@
+name: Report or update wallet support
+description: Tell us which CIP-13 link types a wallet handles. Maintainers turn accepted reports into the support matrix.
+title: '[Wallet support] '
+labels: ['documentation']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Rather edit the data yourself? Open a PR against `src/lib/data/wallet-support.json` with the **Wallet support** PR template, as described in [CONTRIBUTING](https://github.com/CardanoThings/CIP13/blob/development/CONTRIBUTING.md#wallet-support-self-report).
+  - type: input
+    id: wallet
+    attributes:
+      label: Wallet name
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Link handling is separate code on each platform, so report one platform per issue.
+      options:
+        - Mobile
+        - Browser extension
+        - Desktop
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version and OS tested
+      placeholder: e.g. 4.2.0 on Android 15
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Wallet website or docs
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+  # Keep these five in sync with `columns` in src/lib/data/wallet-support.json and the Wallet support PR template.
+  - type: dropdown
+    id: default
+    attributes:
+      label: default (CIP-13)
+      options: [supported, partial, untested, none]
+    validations:
+      required: true
+  - type: dropdown
+    id: stake
+    attributes:
+      label: //stake (CIP-13)
+      options: [supported, partial, untested, none]
+    validations:
+      required: true
+  - type: dropdown
+    id: claim
+    attributes:
+      label: //claim (CIP-99)
+      options: [supported, partial, untested, none]
+    validations:
+      required: true
+  - type: dropdown
+    id: drep
+    attributes:
+      label: //drep (CIP-162)
+      options: [supported, partial, untested, none]
+    validations:
+      required: true
+  - type: dropdown
+    id: browse
+    attributes:
+      label: //browse (CIP-158)
+      options: [supported, partial, untested, none]
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations
+      description: For every `partial`, say what doesn't work — e.g. the link opens the wallet but ignores `?amount=`.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Release notes, docs, the exact links you tested, screenshots or repro steps.
+    validations:
+      required: true
+  - type: checkboxes
+    id: standing
+    attributes:
+      label: Who is reporting
+      options:
+        - label: I represent this wallet or have permission to report on its behalf
+        - label: I tested the links myself on the version above

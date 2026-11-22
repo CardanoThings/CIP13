@@ -1,0 +1,29 @@
+name: Site bug
+description: Something on the site is broken — rendering, a dead link, a QR code that doesn't scan.
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://cip13.cardanothings.io/...
+    validations:
+      required: true
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser and device
+      placeholder: e.g. Safari on iOS 19

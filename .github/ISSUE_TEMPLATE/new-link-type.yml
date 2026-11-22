@@ -1,0 +1,49 @@
+name: Propose a new link type
+description: Ask for a CIP-13 authority (a new `//something`) to get its own page and column in the matrix.
+title: '[Link type] '
+labels: ['enhancement']
+body:
+  - type: input
+    id: cip
+    attributes:
+      label: CIP number
+      placeholder: e.g. CIP-107, or "unassigned" for an open PR
+    validations:
+      required: true
+  - type: input
+    id: authority
+    attributes:
+      label: Authority
+      placeholder: e.g. //transaction
+    validations:
+      required: true
+  - type: input
+    id: upstream
+    attributes:
+      label: Upstream CIP or PR
+      placeholder: https://github.com/cardano-foundation/CIPs/...
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Current CIP status
+      options:
+        - Unmerged PR
+        - Proposed
+        - Active
+        - Inactive
+    validations:
+      required: true
+  - type: input
+    id: example
+    attributes:
+      label: Example URI
+      placeholder: web+cardano://...
+    validations:
+      required: true
+  - type: textarea
+    id: wallets
+    attributes:
+      label: Wallets known to implement it
+      description: With a link to where each one says so, if you have it.

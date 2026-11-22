@@ -12,6 +12,8 @@
 - [ ] New wallet row
 - [ ] Update existing row
 
+<!-- Keep these rows in sync with `columns` in wallet-support.json and .github/ISSUE_TEMPLATE/wallet-support.yml. -->
+
 | Link type          | Status (`supported` / `partial` / `untested` / `none`) | Notes |
 | ------------------ | ------------------------------------------------------ | ----- |
 | default (CIP-13)   |                                                        |       |
