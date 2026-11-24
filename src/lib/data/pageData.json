@@ -1,10 +1,10 @@
 {
 	"/pay": {
 		"title": "Requesting Payments with no friction at all",
-		"description": "Create a pre-filled ADA transaction with a single link. This will be able to support other assets and metadata in the future, go check it out!",
+		"description": "Create a pre-filled ADA transaction with a single link. Support for other assets and metadata is proposed in CIP-157, which is still an unmerged draft.",
 		"cips": [13, 157],
 		"status": "live",
-		"intro": "This is the OG CIP-13 standard for creating simple ADA transactions using the `//web+cardano` URI scheme without a dedicated authority. One link, recipient address and optional ADA amount. Click/scan the link, the wallet app opens with the prefilled data, sign & submit and you are done. Easy.\n\n**Note:** CIP-157 will introduce a more advanced payment link standard under the `//pay` authority and add support for multiple assets and optional metadata in transactions.",
+		"intro": "This is the OG CIP-13 standard for creating simple ADA transactions using the `web+cardano:` URI scheme without a dedicated authority. One link, recipient address and optional ADA amount. Click/scan the link, the wallet app opens with the prefilled data, sign & submit and you are done. Easy.\n\n**Note:** CIP-157 proposes a more advanced payment link under the `//pay` authority, with multiple assets, a payment ID and a note. It is still an unmerged draft ([PR #843](https://github.com/cardano-foundation/CIPs/pull/843)), and a review in August 2026 requested changes to how it names assets and to its grammar, so its syntax may still change. Don't build links on it yet.",
 		"linkBuildExplanation": "Classic **CIP-13** payment URIs use the **`web+cardano:`** scheme followed immediately by a **Bech32 payment address** (no `//` authority segment). Optionally append **`?amount=`** with a decimal ADA amount.\n\nGeneral shape: `web+cardano:<address>[?amount=<ada>]`.",
 		"exampleLink": "web+cardano:addr1q8xy5cfmccecvvr2z7ns7mzld8qkq73lgwnq7vy3my0s5rl77gw49j7k5advzrqtuxc7pa7jww5q7ns42sayyt8msylsx4k2qx?amount=1.25",
 		"walletSupportColumns": ["CIP-13"],
@@ -14,11 +14,7 @@
 				"href": "https://cips.cardano.org/cip/CIP-13"
 			},
 			{
-				"label": "CIP-157 Draft",
-				"href": "https://github.com/Crypto2099/CIPs/tree/cardano-uris-enhanced-payment/CIP-XXXX"
-			},
-			{
-				"label": "CIP-157 Discussion",
+				"label": "CIP-157 draft (PR #843, unmerged)",
 				"href": "https://github.com/cardano-foundation/CIPs/pull/843"
 			}
 		]
@@ -96,10 +92,6 @@
 			{
 				"label": "CIP-158 discussion",
 				"href": "https://github.com/cardano-foundation/CIPs/pull/1058"
-			},
-			{
-				"label": "Minimal CIP-158 Banner Demo",
-				"href": "https://cip13.cardanothings.io/cip158-demo/"
 			}
 		]
 	}

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Cardano CIP repository
+    url: https://github.com/cardano-foundation/CIPs
+    about: To change a standard itself, open a PR or discussion there — this repo only documents the CIPs.

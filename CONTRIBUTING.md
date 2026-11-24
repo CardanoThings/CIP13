@@ -38,12 +38,15 @@ Please follow the [Code of Conduct](CODE_OF_CONDUCT.md).
 
 Wallet teams can update the public support matrix by editing **only** [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json) and opening a pull request with the **Wallet support** template.
 
+If you'd rather not edit JSON, file the [**Report or update wallet support**](https://github.com/CardanoThings/CIP13/issues/new?template=wallet-support.yml) issue form instead, and a maintainer will turn it into the data change.
+
 ### What to edit
 
 1. Fork the repo and create a branch.
 2. Either add a new object under `rows`, or update an existing wallet’s `values`.
 3. Each row needs:
    - `wallet` — display name
+   - `platform` — `mobile`, `extension` or `desktop`. A wallet that behaves differently per platform gets one row per platform, since link handling is separate code on each
    - `link` — wallet website or docs URL
    - `values` — a status for **every** entry in the top-level `columns` array
 
@@ -51,12 +54,12 @@ Do **not** invent new column names. If a new CIP / link type should appear in th
 
 ### Allowed status values
 
-| Status | Meaning |
-| --- | --- |
-| `supported` | Works for this link type |
-| `partial` | Works with known limitations (describe them in the PR) |
-| `untested` | Claimed or unknown; not verified yet |
-| `none` | Not implemented |
+| Status      | Meaning                                                |
+| ----------- | ------------------------------------------------------ |
+| `supported` | Works for this link type                               |
+| `partial`   | Works with known limitations (describe them in the PR) |
+| `untested`  | Claimed or unknown; not verified yet                   |
+| `none`      | Not implemented                                        |
 
 ### Evidence
 
@@ -71,7 +74,7 @@ Use the **Wallet support** pull request template:
 
 ### Maintainers
 
-When merging wallet-support changes, bump the hardcoded **Last updated** date in [`src/lib/components/SupportTable.svelte`](src/lib/components/SupportTable.svelte).
+When merging wallet-support changes, bump the top-level **`lastUpdated`** field (ISO `YYYY-MM-DD`) in [`src/lib/data/wallet-support.json`](src/lib/data/wallet-support.json). The table footer renders that field, so the date lives in the same file — and the same diff — as the data it describes.
 
 ### Maintainers: branch protection (one-time GitHub setup)
 

@@ -8,6 +8,8 @@ SvelteKit static site documenting CIP-13 / `web+cardano` links.
 
 Day-to-day work and contributor PRs target the **`development`** branch. Production deploys only from **`main`**.
 
+**How the site works:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). **What the CIPs and wallets currently do, with sources and dates:** [docs/ECOSYSTEM.md](docs/ECOSYSTEM.md).
+
 ## Developing
 
 ```sh

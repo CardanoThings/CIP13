@@ -1,8 +1,6 @@
-<script lang="ts">
-	let { children, class: className = '' } = $props<{
-		children?: any;
-		class?: string;
-	}>();
+<script>
+	/** @type {{ children?: import('svelte').Snippet; class?: string }} */
+	let { children, class: className = '' } = $props();
 </script>
 
 <span class={`badge ${className}`}>
@@ -25,4 +23,3 @@
 		white-space: nowrap;
 	}
 </style>
-
